@@ -1,21 +1,63 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
- /* $("#main").append("Evgeny Degtev"); */
- 
- var awesomeThoughts = "My name is Evgeny and I am AWESOME!";
- 
- console.log(awesomeThoughts);
- 
- var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
- 
- console.log(funThoughts);
- 
- $("#main").append(funThoughts);
- 
- var formattedName, formattedRole;
- formattedName = HTMLheaderName.replace("%data%", "Evgeny");
- formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
- 
- $("#header").prepend(formattedRole);
- $("#header").prepend(formattedName);
+var work = {
+	"jobs": [
+		{
+			"employer": "bla",
+			"title": "bla",
+			"location": "bla",
+			"dates": "bla",
+			"description": "bla"
+		},
+		{
+			"employer": "bla",
+			"title": "bla",
+			"location": "bla",
+			"dates": "bla",
+			"description": "bla"
+		}
+	]
+};
+
+var projects = {
+	"projects": [
+		{
+			"title": "bla",
+			"dates": "bla",
+			"description": "bla",
+			"images": ["bla/bla.jpg", "bla/bla.jpg"]
+		},
+		{
+			"title": "bla",
+			"dates": "bla",
+			"description": "bla",
+			"images": ["bla/bla.jpg", "bla/bla.jpg"]
+		}
+	]
+};
+
+var bio = {
+	"name": "bla",
+	"role": "bla",
+	"contacts": {"mobile", "email", "github", "twitter", "location"},
+	"skills": ["bla", "bla"]
+};
+
+var education = {
+	"schools": [
+		{
+			"name": "bla",
+			"location": "bla",
+			"degree": "bla",
+			"majors": ["bla", "bla"],
+			"dates": "bla",
+			"url": "http://"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "bla",
+			"school": "bla",
+			"dates": "bla",
+			"url": "http://"
+		}
+	]
+};
