@@ -36,7 +36,7 @@ var projects = {
 };
 
 var bio = {
-	"name": "bla",
+	"name": "Evgeny Degtev",
 	"role": "bla",
 	"contacts": {
 		"mobile": "mobile",
@@ -93,4 +93,14 @@ for (var key1 in work.jobs) {
 	$(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[key1].dates));
 	$(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[key1].location));
 	$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[key1].description));
+}
+
+//Internationalize button.
+$("#main").append(internationalizeButton);
+
+function inName() {
+	var name = bio.name.split(" ");
+	
+	return name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase() + 
+		" " + name[1].toUpperCase();
 }
