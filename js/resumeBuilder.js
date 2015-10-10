@@ -1,74 +1,3 @@
-//Objects and arrays with data .replace and .append to.
-var work = {
-	"jobs": [
-		{
-			"employer": "rab1.1",
-			"title": "rab1.2",
-			"location": "rab1.3",
-			"dates": "rab1.4",
-			"description": "rab1.5"
-		},
-		{
-			"employer": "rab2.1",
-			"title": "rab2.2",
-			"location": "rab2.3",
-			"dates": "rab2.4",
-			"description": "rab2.5"
-		}
-	]
-};
-
-var projects = {
-	"projects": [
-		{
-			"title": "bla",
-			"dates": "bla",
-			"description": "bla",
-			"images": ["bla/bla.jpg", "bla/bla.jpg"]
-		},
-		{
-			"title": "bla",
-			"dates": "bla",
-			"description": "bla",
-			"images": ["bla/bla.jpg", "bla/bla.jpg"]
-		}
-	]
-};
-
-var bio = {
-	"name": "Evgeny Degtev",
-	"role": "bla",
-	"contacts": {
-		"mobile": "mobile",
-		"email": "email",
-		"github": "github",
-		"twitter": "twitter",
-		"location": "location"
-		},
-	"skills": ["bla1", "bla2", "bla3", "bla4"]
-};
-
-var education = {
-	"schools": [
-		{
-			"name": "bla",
-			"location": "bla",
-			"degree": "bla",
-			"majors": ["bla", "bla"],
-			"dates": "bla",
-			"url": "http://"
-		}
-	],
-	"onlineCourses": [
-		{
-			"title": "bla",
-			"school": "bla",
-			"dates": "bla",
-			"url": "http://"
-		}
-	]
-};
-
 //My name.
 $("#header").append(HTMLheaderName.replace("%data%", "Evgeny Degtev"));
 
@@ -83,16 +12,16 @@ $("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
 $("#skills").append(HTMLskills.replace("%data%", bio.skills[3]));
 
 //Jobs section.
-for (var key1 in work.jobs) {
+for (var key in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 	
-	var FormattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key1].employer);
-	var FormattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key1].title);
+	var FormattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer);
+	var FormattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key].title);
 	
 	$(".work-entry:last").append(FormattedEmployer + FormattedTitle);
-	$(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[key1].dates));
-	$(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[key1].location));
-	$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[key1].description));
+	$(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[key].dates));
+	$(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[key].location));
+	$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[key].description));
 }
 
 //Internationalize button.
@@ -104,3 +33,23 @@ function inName() {
 	return name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase() + 
 		" " + name[1].toUpperCase();
 }
+
+//Project section.
+projects.display = function display() {
+
+	for (var key in projects.projects) {	
+		$("#projects").append(HTMLprojectStart);
+		$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", projects.projects[key].title));
+		$(".project-entry:last").append(HTMLprojectDates.replace("%data%", projects.projects[key].dates));
+		$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", projects.projects[key].description));
+		
+		if (projects.projects[key].images.length > 0) {
+		
+			for (var key1 in projects.projects[key].images) {
+				$(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[key].images[key1]));
+			}
+		}
+	}
+}
+
+projects.display();
