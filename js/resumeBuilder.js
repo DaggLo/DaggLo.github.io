@@ -9,3 +9,6 @@ projects.display();
 
 //Education section.
 education.display();
+
+//Map.
+$("#mapDiv").append(googleMap);
