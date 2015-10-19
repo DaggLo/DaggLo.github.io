@@ -1,4 +1,4 @@
-//Objects and arrays with data .replace and .append to.
+//Objects and arrays with data .replace() and .append() to.
 var work = {
 	"jobs": [
 		{
@@ -79,8 +79,8 @@ var bio = {
 		"location": "Petrozavodsk, Russian Federation"
 		},
 	"welcomeMessage": "The Emperor protects!", 
-	"skills": ["HTML", "CSS", "JS", "BootStrap", "jQuery", "Git and GitHub"],
-	"biopic": "images/fry.jpg",
+	"skills": ["HTML / CSS", "JS / jQuery", "BootStrap", "Git and GitHub", "Polymer"],
+	"biopic": "images/sm_1.jpg",
 	"display": function () {
 		var name = bio.name.split(" ");
 		name = name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase() + 
@@ -94,6 +94,7 @@ var bio = {
 			if (bio.contacts[key]) {
 				var replacer = HTMLcontactGeneric.replace ("%contact%", key + ":");
 				$("#topContacts").append(replacer.replace("%data%", bio.contacts[key]));
+				$("#footerContacts").append(replacer.replace("%data%", bio.contacts[key]));
 			}
 		}
 		
