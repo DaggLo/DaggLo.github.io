@@ -1,0 +1,15 @@
+@Evgeny I would say, change the colors, choose another font, play around with different font sizes, maybe add some nice css effects like smooth transitions, play around with margin and padding...
+
+you could add a navbar + smooth scrolling
+
+you could change the default map style: https://developers.google.com/maps/documentation/javascript/styling?hl=en
+
+https://snazzymaps.com/
+
+background colors? And a parallax effect? https://www.script-tutorials.com/bootstrap-one-page-template-with-parallax-effect/
+
+there are many ways and reasons, to modify the grid layout. One reason may be different to target devices... media queries can be handy at this point
+
+you may want to refine the grid for the different sections of your resume, adding rows or columns
+
+CSS Grid Layout Module Level 1 http://www.w3.org/TR/css-grid-1/
