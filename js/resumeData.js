@@ -1,4 +1,45 @@
 //Objects and arrays with data .replace() and .append() to.
+var bio = {
+	"name": "Evgeny Degtev",
+	"role": "Web Developer",
+	"contacts": {
+		"mobile": "+7 921-013-6676",
+		"email": "e.a.degtev@gmail.com",
+		"github": "DaggLo",
+		"twitter": null,
+		"location": "Petrozavodsk, Russian Federation"
+		},
+	"welcomeMessage": "The Emperor protects!",
+	"skills": ["HTML", "CSS", "JS", "jQuery", "BootStrap", "Polymer", "Google Maps API", "Git and GitHub"],
+	"biopic": "images/sm_1.jpg",
+	"display": function () {
+		var name = bio.name.split(" ");
+		name = name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase() +
+			" " + name[1].toUpperCase();
+
+		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+		$("#header").prepend(HTMLheaderName.replace("%data%", name));
+
+		for (var key in bio.contacts) {
+
+			if (bio.contacts[key]) {
+				var replacer = HTMLcontactGeneric.replace ("%contact%", key + ":");
+				$("#topContacts").append(replacer.replace("%data%", bio.contacts[key]));
+				$("#footerContacts").append(replacer.replace("%data%", bio.contacts[key]));
+			}
+		}
+
+		$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+		$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+		$("#header").append(HTMLskillsStart);
+
+		for (var i = 0; i < bio.skills.length; i++) {
+			$("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+		}
+	}
+};
+
 var work = {
 	"jobs": [
 		{
@@ -71,47 +112,6 @@ var projects = {
 			for (var j = 0; j < projects.projects[i].images.length; j++) {
 				$(".project-entry:last").append(HTMLprojectImage.replace("%data%", projects.projects[i].images[j]));
 			}
-		}
-	}
-};
-
-var bio = {
-	"name": "Evgeny Degtev",
-	"role": "Web Developer",
-	"contacts": {
-		"mobile": "+7 921-013-6676",
-		"email": "e.a.degtev@gmail.com",
-		"github": "DaggLo",
-		"twitter": null,
-		"location": "Petrozavodsk, Russian Federation"
-		},
-	"welcomeMessage": "The Emperor protects!",
-	"skills": ["HTML / CSS", "JS / jQuery", "BootStrap", "Git and GitHub", "Polymer"],
-	"biopic": "images/sm_1.jpg",
-	"display": function () {
-		var name = bio.name.split(" ");
-		name = name[0].charAt(0).toUpperCase() + name[0].slice(1).toLowerCase() +
-			" " + name[1].toUpperCase();
-
-		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
-		$("#header").prepend(HTMLheaderName.replace("%data%", name));
-
-		for (var key in bio.contacts) {
-
-			if (bio.contacts[key]) {
-				var replacer = HTMLcontactGeneric.replace ("%contact%", key + ":");
-				$("#topContacts").append(replacer.replace("%data%", bio.contacts[key]));
-				$("#footerContacts").append(replacer.replace("%data%", bio.contacts[key]));
-			}
-		}
-
-		$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-		$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-
-		$("#header").append(HTMLskillsStart);
-
-		for (var i = 0; i < bio.skills.length; i++) {
-			$("#header").append(HTMLskills.replace("%data%", bio.skills[i]));
 		}
 	}
 };

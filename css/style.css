@@ -166,6 +166,9 @@ span {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  position: absolute;
+    top: 16%;
+    right: 5%;
 }
 
 #skills-h3 {
@@ -173,8 +176,14 @@ span {
   display: none;
 }
 
+#skills {
+  flex-direction: column;
+  height: 115px;
+  width: 30%;
+}
+
 .skills {
-  list-style-type: none;
+
 }
 
 .orange {
@@ -219,11 +228,23 @@ span {
   display: none;
 }
 
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
 #lets-connect {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
+/* Media queries to handle various device widths. */
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
@@ -241,24 +262,20 @@ span {
   #lets-connect {
     margin-top: 10%;
   }
-  .biopic {
+
+  /*.biopic {
     width: 150px;
-  }
+  }*/
+
   .welcome-message {
     display: none;
   }
-}
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+  #skills {
+    flex-direction: row;
+    width: auto;
+    height: 70px;
+  }
 }
 
 @media only screen and (min-width: 750px) {
