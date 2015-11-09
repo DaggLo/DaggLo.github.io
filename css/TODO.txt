@@ -10,6 +10,12 @@ background colors? And a parallax effect? https://www.script-tutorials.com/boots
 
 there are many ways and reasons, to modify the grid layout. One reason may be different to target devices... media queries can be handy at this point
 
+IImmediately-invoked function expression
+http://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript
+try wrap js/resumeBuilder.js into IIFE
+(function(){
+})();
+
 you may want to refine the grid for the different sections of your resume, adding rows or columns
 
 CSS Grid Layout Module Level 1 http://www.w3.org/TR/css-grid-1/
