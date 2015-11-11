@@ -130,7 +130,6 @@ em {
   float: right;
 }
 
-.menu,
 .education-entry,
 .work-entry,
 .project-entry,
@@ -299,10 +298,16 @@ em {
     width: auto;
     height: 70px;
   }
+
+  .menu {
+    padding: 0 5%;
+  }
+
   .nav > li > a {
     -webkit-transition: padding-left 1s;
     transition: padding-left 1s;
   }
+
   .nav > li > a:hover {
     padding-left: 35px;
     border-radius: 4px;
@@ -320,7 +325,9 @@ em {
   }
 
   .nav {
-    width: 100%
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .nav > li {

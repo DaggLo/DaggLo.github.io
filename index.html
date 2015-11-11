@@ -43,6 +43,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script src="js/jQuery.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
@@ -57,6 +59,16 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
+
+  <!-- Smooth scrolling -->
+  <script>
+    $(document).ready(function() {
+      $.localScroll({
+        hash: true
+      });
+    });
+  </script>
+
 </head>
 <body>
   <div id="main">
