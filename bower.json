@@ -1,0 +1,22 @@
+{
+  "name": "bower",
+  "homepage": "https://github.com/DaggLo/frontend-nanodegree-resume",
+  "authors": [
+    "Evgeny Degtev <e.a.degtev@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.3",
+    "paper-ripple": "PolymerElements/paper-ripple#~1.0.5"
+  }
+}
