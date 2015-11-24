@@ -238,6 +238,10 @@ em {
   background-color: rgba(70, 10, 10, 0.65);
 }
 
+paper-ripple {
+  color: #EF8181;
+}
+
 .orange {
   /*background-color: #f5ae23;*/
   background-color: #460a0a;
